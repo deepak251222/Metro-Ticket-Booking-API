@@ -69,7 +69,7 @@ Station
 }
 Metro Ticket booking o/p :-
 i/p :
-localhost:8082/api/tickets/buy
+http:http://localhost:8082/api/tickets/buy
 {
     "startStation": "B",
     "destinationStation": "C1"
@@ -84,10 +84,11 @@ o/p :-{
     "price": 8
 }
 enter : 
-i/p :- localhost:8082/api/tickets/enter/06ae4677-9f0d-4b2b-a535-fc54ce559394
+i/p :-http://localhost:8082/api/tickets/enter/06ae4677-9f0d-4b2b-a535-fc54ce559394
 o/p : if id is not expire or not use < 2 time     O/P    "Entered station successfully!" 
-exit : 
-   i/p :- localhost:8082/api/tickets/exit/06ae4677-9f0d-4b2b-a535-fc54ce559394
+exit :
+   i/p :- 
+http://localhost:8082/api/tickets/exit/06ae4677-9f0d-4b2b-a535-fc54ce559394
 o/p : if id is not expire or not use < 2 time     O/P    "Exited station successfully!" 
 
 
