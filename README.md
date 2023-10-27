@@ -36,7 +36,16 @@ Use a ticket for entry and exit.
 Verify the validity of a ticket.
 The system enforces the two-time use and 18-hour expiration limit, showing "Invalid Token or ID" or "Token Is Expire" messages as needed.
 
-Some O/P:-
+Some I/P:- 
+http://localhost:8082/api/tickets/createStation
+{
+    "name": "D1",
+    "startStation": false,
+    "lastStation": false,
+    "price": 28
+}
+O/P:-get all station 
+link:- http://localhost:8082/api/tickets/station
 Station 
 {
     "Station": [
