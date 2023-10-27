@@ -35,3 +35,59 @@ Check the status of a ticket.
 Use a ticket for entry and exit.
 Verify the validity of a ticket.
 The system enforces the two-time use and 18-hour expiration limit, showing "Invalid Token or ID" or "Token Is Expire" messages as needed.
+
+Some O/P:-
+Station 
+{
+    "Station": [
+        {
+            "name": "A",
+            "startStation": true
+        },
+        {
+            "name": "B",
+            "price": 10
+        },
+        {
+            "name": "C",
+            "price": 15
+        },
+        {
+            "name": "C1",
+            "price": 18
+        },
+        {
+            "name": "D",
+            "lastStation": true,
+            "price": 25
+        },
+        {
+            "name": "D1",
+            "price": 28
+        }
+    ]
+}
+Metro Ticket booking o/p :-
+i/p :
+localhost:8082/api/tickets/buy
+{
+    "startStation": "B",
+    "destinationStation": "C1"
+}
+
+o/p :-{
+    "ticketId": "06ae4677-9f0d-4b2b-a535-fc54ce559394",
+    "sourceStation": "B",
+    "destinationStation": "C1",
+    "expirationTime": "2023-10-28T10:59:12.3382163",
+    "usagesLeft": 2,
+    "price": 8
+}
+enter : 
+i/p :- localhost:8082/api/tickets/enter/06ae4677-9f0d-4b2b-a535-fc54ce559394
+o/p : if id is not expire or not use < 2 time     O/P    "Entered station successfully!" 
+exit : 
+   i/p :- localhost:8082/api/tickets/exit/06ae4677-9f0d-4b2b-a535-fc54ce559394
+o/p : if id is not expire or not use < 2 time     O/P    "Exited station successfully!" 
+
+
