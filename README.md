@@ -12,6 +12,9 @@ Running the Application
 bash
 Copy code
 git clone https://github.com/deepak251222/Metro-Ticket-Booking-API.git
+
+POSTMAN DOC 
+https://documenter.getpostman.com/view/24219652/2s9YRGw8Ed
 Set up the database:
 
 Create a MySQL database and configure the database connection settings in application.properties.
