@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "788c3bcf-1ca5-4c23-b921-9d45e1072416",
+		"name": "MetroTicketBooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24219652"
+	},
+	"item": [
+		{
+			"name": "station",
+			"item": [
+				{
+					"name": "createStation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"D1\",\r\n    \"startStation\": false,\r\n    \"lastStation\": false,\r\n    \"price\": 28\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/tickets/createStation",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"tickets",
+								"createStation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getallstation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/tickets/station",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"tickets",
+								"station"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticketoperations",
+			"item": [
+				{
+					"name": "BuyTicket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startStation\": \"B\",\r\n    \"destinationStation\": \"C1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/tickets/buy",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"tickets",
+								"buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "enter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/tickets/enter/06ae4677-9f0d-4b2b-a535-fc54ce559394",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"tickets",
+								"enter",
+								"06ae4677-9f0d-4b2b-a535-fc54ce559394"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/api/tickets/exit/06ae4677-9f0d-4b2b-a535-fc54ce559394",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"tickets",
+								"exit",
+								"06ae4677-9f0d-4b2b-a535-fc54ce559394"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
