@@ -28,6 +28,7 @@ public class TicketController {
     @PostMapping("/createStation")
     public ResponseEntity<Station> CreateStation(@RequestBody Station station) {
         Station station1 =stationRepo.save(station);
+        System.out.println("create station");
         return ResponseEntity.status(HttpStatus.CREATED).body(station1);
     }
     @GetMapping("/station")
